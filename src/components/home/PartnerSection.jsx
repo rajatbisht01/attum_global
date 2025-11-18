@@ -16,26 +16,26 @@ const PartnersSection = () => {
       logo: "https://brizsolutionimages.s3.us-west-2.amazonaws.com/logos.png",
       href: "https://solutionbriz.com/ ",
     },
-    {
-      name: "Nvish",
-      logo: "https://www.nvish.com/wp-content/uploads/2022/02/nvish-logo-1.svg",
-      href: "https://nvish.com",
-    },
-    {
-      name: "UbMatic",
-      logo: "https://www.ubmatic.com/images/ubmatic_full.png",
-      href: "https://ubmatic.com",
-    },
-    {
-      name: "Avenir",
-      logo: "https://avenirengineering.com/wp-content/uploads/2025/09/cropped-AV-logo4-White-500px-300x74-1.png",
-      href: "https://avenirengineering.com",
-    },
-    {
-      name: "CitiesForum",
-      logo: "https://www.citiesforum.org/wp-content/uploads/2018/11/CitiesForum_Positivo_Color-1.png",
-      href: "https://citiesforum.org",
-    },
+    // {
+    //   name: "Nvish",
+    //   logo: "https://www.nvish.com/wp-content/uploads/2022/02/nvish-logo-1.svg",
+    //   href: "https://nvish.com",
+    // },
+    // {
+    //   name: "UbMatic",
+    //   logo: "https://www.ubmatic.com/images/ubmatic_full.png",
+    //   href: "https://ubmatic.com",
+    // },
+    // {
+    //   name: "Avenir",
+    //   logo: "https://avenirengineering.com/wp-content/uploads/2025/09/cropped-AV-logo4-White-500px-300x74-1.png",
+    //   href: "https://avenirengineering.com",
+    // },
+    // {
+    //   name: "CitiesForum",
+    //   logo: "https://www.citiesforum.org/wp-content/uploads/2018/11/CitiesForum_Positivo_Color-1.png",
+    //   href: "https://citiesforum.org",
+    // },
   ];
 
   const stats = [
@@ -139,7 +139,7 @@ const PartnersSection = () => {
                 <motion.div className="text-4xl mb-4" {...animationProps}>
                   {item.icon}
                 </motion.div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-xl font-semibold text-gradient mb-3">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">

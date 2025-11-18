@@ -41,7 +41,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link onClick={() => scrollToSection("offering")} href="#offerings" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                <Link onClick={() => scrollToSection("offering")} href="#offering" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   Offerings
                 </Link>
               </li>

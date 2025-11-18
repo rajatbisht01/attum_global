@@ -8,6 +8,7 @@ import AnimatedText from "@/components/ui/animated-text";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
+import GradientText from "../ui/GradientText";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -71,14 +72,19 @@ const ContactSection = () => {
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <AnimatedText delay={0.2}>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
-              Get In{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-br from-orange-500 via-orange-400 to-amber-400">
-                Touch
-              </span>
-            </h2>
-          </AnimatedText>
+                 <div className="flex items-center justify-center ">
+  <AnimatedText delay={0.2} className="flex">
+    <div className="flex gap-4 items-center justify-center md:text-5xl font-bold text-[var(--color-text)] mb-6">
+      <span className="text-5xl bg-clip-text text-transparent bg-black">
+        Get in{" "}
+      </span>
+
+      <GradientText className="text-5xl pr-2 font-bold">
+        Touch
+      </GradientText>
+    </div>
+  </AnimatedText>
+</div>
 
           <AnimatedText delay={0.4}>
             <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-gray-700">

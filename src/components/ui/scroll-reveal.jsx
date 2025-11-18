@@ -18,9 +18,9 @@ const ScrollReveal = ({
       case "down":
         return { y: -80 };
       case "left":
-        return { x: -90 };
+        return { x: -120 };
       case "right":
-        return { x: 90 };
+        return { x: 120 };
       default:
         return { y: 20 };
     }

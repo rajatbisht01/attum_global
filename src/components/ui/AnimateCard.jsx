@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ScrollReveal from './scroll-reveal'
 import { motion } from 'framer-motion'
 import {  CheckCircle, ChevronDown, ChevronUp } from 'lucide-react'
+import GradientText from './GradientText'
 
 const AnimateCard = ({
   index,
@@ -31,8 +32,8 @@ const AnimateCard = ({
     <>
       <motion.div
         whileHover={{ scale: 1.06 }}
-        className={`relative p-2 shadow-md rounded-2xl  group hover:shadow-2xl transition-all ${
-          isBackground ? 'text-white overflow-hidden' : 'bg-white p-5'
+        className={`relative p-2 shadow-xl rounded-2xl  group hover:shadow-2xl transition-all ${
+          isBackground ? 'text-white overflow-hidden' : 'bg-white p-4'
         }`}
         style={
           isBackground
@@ -57,22 +58,23 @@ const AnimateCard = ({
               <img
                 src={image}
                 alt={title}
-                className="w-full h-32 object-cover rounded-xl"
+                className="w-full h-48 object-cover rounded-xl"
               />
             </div>
           )}
 
           {/* Header */}
-          <div className="flex items-start space-x-4 mb-1">
+          <div className="flex  items-start space-x-4 mb-1">
             <div className="p-4 bg-gradient-to-br from-orange-500 via-orange-400 to-amber-400 rounded-2xl text-white group-hover:scale-110 transition-transform">
               <Icon className="w-6 h-6" />
             </div>
             <div className={isBackground ? 'max-w-lg' : ''}>
               <h3
-                className={`text-2xl font-bold mb-1 ${
+                className={`text-2xl  font-bold mb-1 ${
                   isBackground ? 'text-white' : 'text-[var(--color-text)]'
                 }`}
               >
+
                 {title}
               </h3>
               <p

@@ -16,26 +16,10 @@ const PartnersSection = () => {
       logo: "https://brizsolutionimages.s3.us-west-2.amazonaws.com/logos.png",
       href: "https://solutionbriz.com/ ",
     },
-    // {
-    //   name: "Nvish",
-    //   logo: "https://www.nvish.com/wp-content/uploads/2022/02/nvish-logo-1.svg",
-    //   href: "https://nvish.com",
-    // },
-    // {
-    //   name: "UbMatic",
-    //   logo: "https://www.ubmatic.com/images/ubmatic_full.png",
-    //   href: "https://ubmatic.com",
-    // },
-    // {
-    //   name: "Avenir",
-    //   logo: "https://avenirengineering.com/wp-content/uploads/2025/09/cropped-AV-logo4-White-500px-300x74-1.png",
-    //   href: "https://avenirengineering.com",
-    // },
-    // {
-    //   name: "CitiesForum",
-    //   logo: "https://www.citiesforum.org/wp-content/uploads/2018/11/CitiesForum_Positivo_Color-1.png",
-    //   href: "https://citiesforum.org",
-    // },
+     {
+      name: "AILTS",
+     
+    },
   ];
 
   const stats = [
@@ -90,7 +74,7 @@ const PartnersSection = () => {
         >
           <LogoLoop
             logos={logoItems}
-            speed={120}
+            speed={0}
             direction="left"
             logoHeight={22}
             gap={160}
@@ -98,7 +82,7 @@ const PartnersSection = () => {
             scaleOnHover
             fadeOut
             fadeOutColor="#f3f4f6" // matches gray-100 background feel
-            // ariaLabel="Our partners"
+            ariaLabel="Our partners"
           />
         </div>
 

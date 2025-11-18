@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import AnimateCard from "../ui/AnimateCard";
 import { ArrowRight, Code, Shield, Sparkles, Cloud, Database, Lock, Brain, Layout, Cpu, CheckCircle2, Zap, Award, Globe } from "lucide-react";
 import ScrollReveal from "../ui/scroll-reveal";
+import GradientText from "@/components/ui/GradientText";
 
  const pillars = [
   {
@@ -33,7 +34,7 @@ import ScrollReveal from "../ui/scroll-reveal";
 ];
 const StrategicPillarsSection = () => {
   return (
-    <section className="pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section id="technology" className="pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
 
       <div className="container mx-auto relative z-10">
@@ -54,8 +55,11 @@ const StrategicPillarsSection = () => {
             Three Strategic Pillars
           </motion.span>
 
-          <div className="bg-clip-text text-4xl font-extrabold text-transparent bg-gradient-to-br from-orange-500 via-orange-400 to-amber-400">
+          <div className="bg-clip-text pb-2 text-4xl font-extrabold text-transparent bg-gradient-to-br from-orange-500 via-orange-400 to-amber-400">
+            <GradientText showBorder={false}>
+
              Complete Digital Lifecycle
+            </GradientText>
             </div>
 
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">

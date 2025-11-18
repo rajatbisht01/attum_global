@@ -23,6 +23,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AnimateCard from "../ui/AnimateCard";
+import GradientText from "@/components/ui/GradientText";
 
 const MarketingSection = () => {
   const [activeTab, setActiveTab] = useState("engineering");
@@ -85,7 +86,7 @@ const MarketingSection = () => {
       description:
         "Ensuring that technology works reliably, securely, and at scale with advanced testing and cybersecurity.",
       icon: Shield,
-       direction: "bottom",
+      direction: "bottom",
       gradient: "from-primary-dark via-primary to-orange-400",
       offerings: [
         {
@@ -194,14 +195,18 @@ const MarketingSection = () => {
       <div className="mx-auto  px-4 sm:px-6 lg:px-8">
         {/* HEADER */}
         <ScrollReveal enableBlur={true} className="text-center mb-12">
-          <AnimatedText delay={0.2}>
-            <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-text)] mb-6">
-              Our{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-br from-orange-500 via-orange-400 to-amber-400">
-                Core Services
-              </span>
-            </h2>
-          </AnimatedText>
+          <div className="flex items-center justify-center ">
+            <AnimatedText delay={0.2} className="flex">
+              <div className="flex gap-4 items-center justify-center md:text-5xl font-bold text-[var(--color-text)] mb-6">
+                <span className="text-5xl bg-clip-text text-transparent bg-black">
+                  Our{" "}
+                </span>
+
+                <GradientText className="text-5xl">Core Services</GradientText>
+              </div>
+            </AnimatedText>
+          </div>
+
           <AnimatedText delay={0.4}>
             <p className="text-xl  md:pb-0 text-[var(--color-muted)] max-w-3xl mx-auto leading-relaxed">
               End-to-end technology solutions for modern enterprises.
@@ -210,45 +215,55 @@ const MarketingSection = () => {
         </ScrollReveal>
 
         {/* TABS */}
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full  ">
+        <Tabs
+          value={activeTab}
+          onValueChange={setActiveTab}
+          className="w-full  "
+        >
           <TabsList className="grid py-24 md:py-0 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-4 place-content-center mx-4 sm:mx-6 md:mx-48 bg-transparent">
-  {pillars.map((pillar) => (
-    <TabsTrigger
-      key={pillar.id}
-      value={pillar.id}
-      className="data-[state=active]:bg-[var(--color-brand)] data-[state=active]:text-white
+            {pillars.map((pillar) => (
+              <TabsTrigger
+                key={pillar.id}
+                value={pillar.id}
+                className="data-[state=active]:bg-[var(--color-brand)] data-[state=active]:text-white
                  h-20 py-4 px-4 sm:py-6 sm:px-6 text-left rounded-2xl border-2 border-border/50 
                  hover:border-[var(--color-brand)]/30 transition-all"
-    >
-      <div className="flex items-start gap-3 sm:gap-4">
-        <div className="rounded-xl bg-background/20 flex items-center justify-center shrink-0">
-          <pillar.icon className="w-6 h-6 sm:w-8 sm:h-8" />
-        </div>
-        <div className="font-bold text-base sm:text-lg leading-tight">{pillar.title}</div>
-      </div>
-    </TabsTrigger>
-  ))}
-</TabsList>
-
+              >
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="rounded-xl bg-background/20 flex items-center justify-center shrink-0">
+                    <pillar.icon className="w-6 h-6 sm:w-8 sm:h-8" />
+                  </div>
+                  <div className="font-bold text-base sm:text-lg leading-tight">
+                    {pillar.title}
+                  </div>
+                </div>
+              </TabsTrigger>
+            ))}
+          </TabsList>
 
           {/* TAB CONTENT */}
           {pillars.map((pillar) => (
             <TabsContent key={pillar.id} value={pillar.id} className="mt-18">
               {activeTab === pillar.id && (
-               
-                  <ScrollReveal direction={pillar.direction} delay={0.1} className="space-y-12">
+                <ScrollReveal
+                enableBlur={true}
+                blurStrength={10}
+                  direction={pillar.direction}
+                  delay={0.2}
+                  className="space-y-12"
+                >
                   {/* Header Block */}
-                 <div className="text-center">
-                  <h3 className="text-3xl font-bold text-gradient mb-4">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-lg text-[var(--color-muted)] max-w-2xl mx-auto">
-                    {pillar.description}
-                  </p>
-                </div>
+                  <div className="text-center">
+                    <h3 className="text-3xl font-bold text-gradient mb-4">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-lg text-[var(--color-muted)] max-w-2xl mx-auto">
+                      {pillar.description}
+                    </p>
+                  </div>
 
                   {/* Offerings */}
-                  <div className="grid md:grid-cols-2 gap-8">
+                  <div className="grid lg:px-48  md:grid-cols-2 gap-8">
                     {pillar.offerings.map((offering, idx) => (
                       <AnimateCard
                         key={idx}
@@ -263,14 +278,11 @@ const MarketingSection = () => {
                       />
                     ))}
                   </div>
-                  </ScrollReveal>
-                
+                </ScrollReveal>
               )}
             </TabsContent>
           ))}
         </Tabs>
-
-         
       </div>
     </section>
   );

@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-5">
       {/* Hero Section */}
-      
+
         <HeroSection />
 
       <ScrollReveal  delay={0.3}  direction="up" className="md:px-10 ">

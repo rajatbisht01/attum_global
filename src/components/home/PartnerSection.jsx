@@ -59,7 +59,7 @@ const PartnersSection = () => {
         {/* Section Header */}
         <ScrollReveal enableBlur={true} className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Trusted by Industry Leaders
+            Our Partners
           </h2>
           {/* <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             We partner with innovative companies to deliver exceptional results
@@ -68,23 +68,30 @@ const PartnersSection = () => {
         </ScrollReveal>
 
         {/* Partner Logo Loop */}
-        <div
-          className="bg-white"
-          style={{ height: "10rem", position: "relative" }}
-        >
-          <LogoLoop
-            logos={logoItems}
-            speed={0}
-            direction="left"
-            logoHeight={22}
-            gap={160}
-            pauseOnHover
-            scaleOnHover
-            fadeOut
-            fadeOutColor="#f3f4f6" // matches gray-100 background feel
-            ariaLabel="Our partners"
-          />
-        </div>
+        <div className="flex justify-center gap-16 mt-8">
+  {partners.map((partner, idx) => (
+    <a
+      key={idx}
+      href={partner.href || "#"}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center justify-center bg-white rounded-2xl shadow-lg p-6 min-w-[160px] transition-transform hover:scale-105"
+    >
+      {partner.logo ? (
+        <img
+          src={partner.logo}
+          alt={partner.name}
+          className="h-10 w-auto object-contain"
+        />
+      ) : (
+        <span className="text-xl font-bold text-gray-700">
+          {partner.name}
+        </span>
+      )}
+    </a>
+  ))}
+</div>
+
 
         {/* Partnership Stats */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -134,7 +134,7 @@ const AboutSection = () => {
 
         {/* Mission & Vision */}
         <div className="mb-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {['Our Mission', 'Our Vision'].map((title, index) => (
+          {['Our Mission', 'Proven Excellence'].map((title, index) => (
             <motion.div
               key={title}
               initial="hidden"
@@ -146,8 +146,8 @@ const AboutSection = () => {
               <h3 className="text-2xl font-bold text-gradient mb-4">{title}</h3>
               <p className="text-gray-600 leading-relaxed">
                 {title === 'Our Mission'
-                  ? 'To empower businesses with innovative technology solutions and strategic insights that drive sustainable growth, operational excellence, and competitive advantage in an ever-evolving digital landscape.'
-                  : 'To be the global leader in corporate transformation, setting new standards for innovation, reliability, and client success while creating lasting positive impact across industries and communities worldwide.'}
+                  ? 'Empowering enterprises to build, secure, and innovate with world-class technology resourcing solutions that deliver measurable outcomes.'
+                  : 'Over a decade of delivering successful outcomes for enterprises across the globe with unmatched quality and reliability.'}
               </p>
             </motion.div>
           ))}

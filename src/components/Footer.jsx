@@ -1,10 +1,19 @@
 'use client';
 import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
-
+import { motion } from "framer-motion";
 const Footer = () => {
+    const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <footer className="bg-secondary/30 border-t border-border">
+        <motion.div
+    initial={{ opacity: 0, y: -40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, ease: "easeOut", delay:0.2 }}
+    viewport={{ once: false, amount: 0.2 }}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
@@ -22,22 +31,22 @@ const Footer = () => {
             <h4 className="font-semibold text-foreground">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                <Link onClick={() => scrollToSection("hero")} href="#hero" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                <Link onClick={() => scrollToSection("about")} href="#about" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/offerings" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                <Link onClick={() => scrollToSection("offering")} href="#offerings" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   Offerings
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                <Link onClick={() => scrollToSection("contact")} href="#contact" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                   Contact
                 </Link>
               </li>
@@ -85,6 +94,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      </motion.div>
     </footer>
   );
 };

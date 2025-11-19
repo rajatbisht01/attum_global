@@ -74,7 +74,7 @@ export default function HeroCarousel() {
       />
 
       {/* Slide Content */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.90]" style={{ backgroundImage: `url(${slides[0].image})` }} />
+      <div className="absolute h-[90vh] inset-0 bg-cover bg-center bg-no-repeat opacity-[0.90]" style={{ backgroundImage: `url(${slides[0].image})` }} />
 
       <div className="relative z-[5] container mx-auto px-6 lg:px-18 h-full flex items-center">
         <div className="max-w-5xl">
@@ -117,13 +117,14 @@ export default function HeroCarousel() {
             variants={{ visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.5 } } }}
           >
             <Button
+           
               size="lg"
-              className="text-lg px-10 py-7 rounded-2xl text-white shadow-xl"
+              className="text-lg bg-white border-brand border-2  px-10 py-7 rounded-2xl  shadow-xl"
               onClick={() => scrollToSection("offering")}
             >
               <RotatingText
                 texts={["Get started  ", "Know More "]}
-                mainClassName="px-2 sm:px-2 md:px-3 bg-transparent text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                mainClassName="px-2 sm:px-2 md:px-3 bg-transparent text-brand overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
                 staggerFrom={"last"}
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}

@@ -18,7 +18,8 @@ const PartnersSection = () => {
     },
      {
       name: "AILTS",
-     
+      // logo: "https://brizsolutionimages.s3.us-west-2.amazonaws.com/logos.png",
+      href: "https://ailts.ae/ ",
     },
   ];
 
@@ -57,7 +58,7 @@ const PartnersSection = () => {
     <section id="partner" className=" w-full overflow-hidden">
       <div className="mx-auto px-4 sm:px-0">
         {/* Section Header */}
-        <ScrollReveal enableBlur={true} className="text-center mb-14">
+        <ScrollReveal enableBlur={true} className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Our Partners
           </h2>
@@ -68,7 +69,7 @@ const PartnersSection = () => {
         </ScrollReveal>
 
         {/* Partner Logo Loop */}
-        <div className="flex justify-center gap-16 mt-8">
+        <div className="flex justify-center gap-8 lg:gap-12  mt-8">
   {partners.map((partner, idx) => (
     <a
       key={idx}

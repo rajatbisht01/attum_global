@@ -60,7 +60,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <section ref={heroRef} id="hero" className="relative h-[100vh] overflow-hidden">
+    <section ref={heroRef} id="hero" className="relative h-[92vh] overflow-hidden">
       {/* Floating Orbs */}
       <motion.div
         animate={{ scale: [1, 1.25, 1], opacity: [0.25, 0.4, 0.25] }}
@@ -74,7 +74,7 @@ export default function HeroCarousel() {
       />
 
       {/* Slide Content */}
-      <div className="absolute h-[90vh] inset-0 bg-cover bg-center bg-no-repeat opacity-[0.90]" style={{ backgroundImage: `url(${slides[0].image})` }} />
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.90]" style={{ backgroundImage: `url(${slides[0].image})` }} />
 
       <div className="relative z-[5] container mx-auto px-6 lg:px-18 h-full flex items-center">
         <div className="max-w-5xl">
@@ -83,7 +83,7 @@ export default function HeroCarousel() {
             initial={{ opacity: 0, scale: 0.6 }}
             animate={controls}
             variants={{ visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } } }}
-            className="inline-flex items-center bg-primary/10 border border-primary/20 px-6 py-2 rounded-full mb-10 backdrop-blur-md"
+            className="inline-flex items-center bg-primary/10 border mt-12 border-primary/20 px-6 py-2 rounded-full mb-10 backdrop-blur-md"
           >
             <span className="text-secondary-foreground font-semibold text-sm uppercase tracking-wider">
               Your ONE-stop technology resourcing partner
@@ -96,7 +96,7 @@ export default function HeroCarousel() {
             delay={450}
             animateBy="words"
             direction="top"
-            className="text-5xl sm:text-5xl lg:text-7xl font-black leading-[1.1] text-secondary mb-8"
+            className="text-4xl  lg:text-7xl font-black leading-[1.1] text-secondary mb-8"
           />
 
           {/* Subtitle */}
@@ -104,7 +104,7 @@ export default function HeroCarousel() {
             initial={{ opacity: 0, y: 20 }}
             animate={controls}
             variants={{ visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.3 } } }}
-            className="text-2xl text-white/95 max-w-3xl mb-10"
+            className="text-lg lg:text-2xl text-white/95 max-w-3xl mb-10"
           >
             {typedSubtitle}
             {typedSubtitle.length < slides[0].subtitle.length && <span className="animate-pulse">|</span>}
@@ -119,12 +119,12 @@ export default function HeroCarousel() {
             <Button
            
               size="lg"
-              className="text-lg bg-white border-brand border-2  px-10 py-7 rounded-2xl  shadow-xl"
+              className="text-lg bg-white !hover:text-primary  border-brand border-2  px-10 py-7 rounded-2xl  shadow-xl"
               onClick={() => scrollToSection("offering")}
             >
               <RotatingText
                 texts={["Get started  ", "Know More "]}
-                mainClassName="px-2 sm:px-2 md:px-3 bg-transparent text-brand overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                mainClassName="px-2 sm:px-2 md:px-3  bg-transparent text-black hover:text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
                 staggerFrom={"last"}
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}

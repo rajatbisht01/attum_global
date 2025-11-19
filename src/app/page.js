@@ -9,14 +9,31 @@ import ConsultingSection from "@/components/home/ConsultingSection";
 import PartnersSection from "@/components/home/PartnerSection";
 import ScrollReveal from "@/components/ui/scroll-reveal";
 import { motion } from "framer-motion";
-import { ArrowRight, Code, Shield, Sparkles, Cloud, Database, Lock, Brain, Layout, Cpu, CheckCircle2, Zap, Award, Globe } from "lucide-react";
+import { MoveDown, CheckCircle2} from "lucide-react";
 
 export default function Home() {
+  function scrollToSection(sectionId) {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+  }
   return (
     <div className="flex flex-col gap-5">
       {/* Hero Section */}
 
         <HeroSection />
+
+<motion.div
+  animate={{ y: [0, 10, 0] }}
+  transition={{
+    duration: 1.5,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="flex -mt-3 justify-center"
+  onClick={()=>scrollToSection('technology')}
+>
+  <MoveDown className="w-8 h-8 color-brand" />
+</motion.div>
+
 
       <ScrollReveal  delay={0.3}  direction="up" className="md:px-10 ">
         <TechnologySection />

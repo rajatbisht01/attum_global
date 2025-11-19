@@ -197,7 +197,7 @@ const MarketingSection = () => {
         <ScrollReveal enableBlur={true} className="text-center mb-12">
           <div className="flex items-center justify-center ">
             <AnimatedText delay={0.2} className="flex">
-              <div className="flex gap-4 items-center justify-center md:text-5xl font-bold text-[var(--color-text)] mb-6">
+              <div className="flex flex-col lg:flex-row gap-4 items-center justify-center md:text-5xl font-bold text-[var(--color-text)] mb-6">
                 <span className="text-5xl bg-clip-text text-transparent bg-black">
                   Our{" "}
                 </span>

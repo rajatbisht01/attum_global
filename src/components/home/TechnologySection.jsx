@@ -34,7 +34,7 @@ import GradientText from "@/components/ui/GradientText";
 ];
 const StrategicPillarsSection = () => {
   return (
-    <section id="technology" className="pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section id="technology" className="pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
 
       <div className="container mx-auto relative z-10">

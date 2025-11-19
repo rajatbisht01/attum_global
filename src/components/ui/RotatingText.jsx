@@ -30,6 +30,7 @@ const RotatingText = forwardRef((props, ref) => {
   } = props;
 
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false); // ⬅️ NEW
 
   const splitIntoCharacters = text => {
     if (typeof Intl !== 'undefined' && Intl.Segmenter) {
@@ -134,14 +135,17 @@ const RotatingText = forwardRef((props, ref) => {
     [next, previous, jumpTo, reset]
   );
 
+  // ⬇️ UPDATED useEffect (pauses on hover)
   useEffect(() => {
-    if (!auto) return;
+    if (!auto || isPaused) return;
     const intervalId = setInterval(next, rotationInterval);
     return () => clearInterval(intervalId);
-  }, [next, rotationInterval, auto]);
+  }, [next, rotationInterval, auto, isPaused]); // ⬅️ isPaused added
 
   return (
     <motion.span
+      onHoverStart={() => setIsPaused(true)}   // ⬅️ Pause on hover
+      onHoverEnd={() => setIsPaused(false)}    // ⬅️ Resume on leave
       className={cn('flex flex-wrap whitespace-pre-wrap relative', mainClassName)}
       {...rest}
       layout

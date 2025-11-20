@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import BlurText from "@/components/ui/blurText";
 import RotatingText from "../ui/RotatingText";
+import { title } from "process";
 
 const slides = [
   {
@@ -76,7 +77,7 @@ export default function HeroCarousel() {
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.90]" style={{ backgroundImage: `url(${slides[0].image})` }} />
 
       <div className="relative z-[5] container mx-auto px-6 lg:px-18 h-full flex items-center">
-        <div className="max-w-5xl">
+        <div className="max-w-4xl">
           {/* Mini Tag */}
           <motion.div
             initial={{ opacity: 0, scale: 0.6 }}

@@ -109,7 +109,7 @@ const Navigation = () => {
         </motion.div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex">
+        <div className="hidden lg:flex">
           <GooeyNav
             items={gooeyItems.map((item, index) => ({
               ...item,
@@ -128,7 +128,7 @@ const Navigation = () => {
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden text-gray-800"
+          className="lg:hidden text-gray-800"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -142,7 +142,7 @@ const Navigation = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-16 left-0 w-full bg-white shadow-lg md:hidden"
+            className="absolute top-16 left-0 w-full bg-white shadow-lg lg:hidden"
           >
             <div className="flex flex-col items-center space-y-6 py-6">
               {gooeyItems.map((item, index) => (

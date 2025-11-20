@@ -89,8 +89,8 @@ const Navigation = () => {
 
         {/* Logo */}
         <motion.div
-          className="text-2xl font-bold flex items-center text-gray-800 cursor-pointer"
-          whileHover={{ scale: 1.15 }}
+          className="text-2xl font-bold flex items-center  text-gray-800 cursor-pointer"
+          // whileHover={{ scale: 1.15 }}
           onClick={() => scrollToSection("hero")}
         > 
           <img
@@ -101,8 +101,8 @@ const Navigation = () => {
           <motion.span
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
-            whileHover={{ scale: 1.05 }}
-            className="text-4xl ml-4 font-black bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent"
+            // whileHover={{ scale: 1.05 }}
+            className="text-4xl ml-4 text-center  font-black bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent"
           >
             attum
           </motion.span>

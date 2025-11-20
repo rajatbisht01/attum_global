@@ -32,7 +32,7 @@ export default function CaseStudyDetail({ params }) {
                 <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold border border-primary/20">
                   {caseStudy.pillar}
                 </span>
-                <span className="px-4 py-2 bg-muted text-muted-foreground rounded-full text-sm font-semibold">
+                <span className="px-4 py-2 bg-white text-muted-foreground rounded-full text-sm font-semibold">
                   {caseStudy.industry}
                 </span>
               </div>
@@ -84,7 +84,7 @@ export default function CaseStudyDetail({ params }) {
         </section>
 
         {/* Results Cards */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 bg-muted/10">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
@@ -99,7 +99,7 @@ export default function CaseStudyDetail({ params }) {
                     <div className="text-4xl font-bold text-gradient mb-3">
                       {result.value}
                     </div>
-                    <div className="text-sm text-muted-foreground">
+                    <div className="text-sm text-black">
                       {result.metric}
                     </div>
                   </div>

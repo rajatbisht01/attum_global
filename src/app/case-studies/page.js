@@ -6,6 +6,7 @@ import { ArrowRight, Building2, Calendar, Users } from "lucide-react";
 
 
 import { caseStudies } from "../../constant.ts";
+import GradientText from "@/components/ui/GradientText.jsx";
 
 export default function CaseStudies() {
   return (
@@ -27,7 +28,7 @@ export default function CaseStudies() {
                 <span className="text-gradient"> Technology Excellence</span>
               </h1>
 
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-xl text-black max-w-3xl mx-auto">
                 Explore how ATTUM has helped leading organizations across industries achieve their digital transformation goals with measurable results.
               </p>
             </div>
@@ -35,7 +36,7 @@ export default function CaseStudies() {
         </section>
 
         {/* Stats Section */}
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 bg-muted/10">
           <div className="container mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
@@ -51,7 +52,7 @@ export default function CaseStudies() {
                   <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  <div className="text-sm text-black">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -87,7 +88,7 @@ export default function CaseStudies() {
                       <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold border border-primary/20">
                         {study.pillar}
                       </span>
-                      <span className="px-3 py-1 bg-muted text-muted-foreground rounded-full text-xs font-semibold">
+                      <span className="px-3 py-1 bg-white text-black rounded-full text-xs font-semibold">
                         {study.industry}
                       </span>
                     </div>
@@ -96,7 +97,7 @@ export default function CaseStudies() {
                       {study.title}
                     </h2>
 
-                    <div className="flex flex-wrap gap-4 mb-6 text-sm text-muted-foreground">
+                    <div className="flex flex-wrap gap-4 mb-6 text-sm text-black">
                       <div className="flex items-center gap-2">
                         <Building2 className="w-4 h-4 text-primary" />
                         <span>{study.client}</span>
@@ -113,17 +114,17 @@ export default function CaseStudies() {
                       </div>
                     </div>
 
-                    <p className="text-lg text-muted-foreground mb-6">
+                    <p className="text-lg text-black mb-6">
                       {study.description}
                     </p>
 
                     <div className="grid grid-cols-2 gap-4 mb-8">
                       {study.results.slice(0, 4).map((result, idx) => (
-                        <div key={idx} className="bg-muted/50 rounded-xl p-4">
+                        <div key={idx} className="bg-muted/10 rounded-xl p-4">
                           <div className="text-2xl font-bold text-gradient mb-1">
                             {result.value}
                           </div>
-                          <div className="text-sm text-muted-foreground">
+                          <div className="text-sm text-black">
                             {result.metric}
                           </div>
                         </div>
@@ -160,8 +161,11 @@ export default function CaseStudies() {
                 href="/#contact"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold text-lg hover:bg-primary/90 transition-smooth shadow-button"
               >
+             
+
                 Get in Touch
                 <ArrowRight className="w-5 h-5" />
+
               </Link>
             </div>
           </div>

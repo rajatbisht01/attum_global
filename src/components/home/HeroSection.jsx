@@ -59,7 +59,7 @@ export default function HeroCarousel() {
     <section
       ref={heroRef}
       id="hero"
-      className="relative min-h-[60vh] h-auto overflow-hidden flex items-center"
+      className="relative min-h-[84vh] h-auto overflow-hidden flex items-center"
     >
       {/* Floating Orbs */}
       <motion.div

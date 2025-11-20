@@ -47,9 +47,9 @@ const StrategicPillarsSection = () => {
           className="text-center my-2 "
         >
           <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: false }}
+            // initial={{ opacity: 0 }}
+            // whileInView={{ opacity: 1 }}
+            // viewport={{ once: false }}
             className="inline-block text-primary font-bold text-sm uppercase tracking-wider mb-4"
           >
             Three Strategic Pillars

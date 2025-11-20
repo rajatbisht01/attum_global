@@ -35,9 +35,8 @@ export default function Home() {
 </motion.div>
 
 
-      <ScrollReveal  delay={0.3}  direction="up" className="md:px-10 ">
         <TechnologySection />
-      </ScrollReveal>
+     
 
       <ScrollReveal  delay={0.2} className="md:px-10 ">
          <section className="pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">

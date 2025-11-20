@@ -59,7 +59,7 @@ export default function HeroCarousel() {
     <section
       ref={heroRef}
       id="hero"
-      className="relative min-h-[70vh] h-auto overflow-hidden flex items-center"
+      className="relative min-h-[60vh] h-auto overflow-hidden flex items-center"
     >
       {/* Floating Orbs */}
       <motion.div
@@ -74,10 +74,13 @@ export default function HeroCarousel() {
       />
 
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-[0.90]"
-        style={{ backgroundImage: `url(${slides[0].image})` }}
-      />
+      <div className="absolute inset-0 overflow-hidden opacity-[0.90]">
+  <img
+    src={slides[0].image}
+    alt="Hero Background"
+    className="w-full h-full object-cover object-center"
+  />
+</div>
 
       {/* Content */}
       <div className="relative z-[5] container mx-auto px-6 lg:px-18 py-20 flex flex-col justify-center">
@@ -94,7 +97,7 @@ export default function HeroCarousel() {
                 transition: { duration: 0.6 },
               },
             }}
-            className="inline-flex max-w-fit items-center bg-white border mt-15 border-primary/20 px-6 py-1 rounded-full mb-6 backdrop-blur-md"
+            className="inline-flex max-w-fit items-center bg-white border mt-8 border-primary/20 px-6 py-1 rounded-full mb-6 backdrop-blur-md"
           >
             <span className="text-secondary-foreground font-semibold text-xs uppercase tracking-wider">
               Your ONE-stop technology resourcing partner

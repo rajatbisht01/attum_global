@@ -6,13 +6,13 @@ import { ArrowRight, Building2, Calendar, Users } from "lucide-react";
 
 
 import { caseStudies } from "../../constant.ts";
-import GradientText from "@/components/ui/GradientText.jsx";
+import CountUp from "@/components/ui/CountUp.jsx";
 
 export default function CaseStudies() {
   return (
-    <div className="min-h-screen bg-background">
+    <div id="case-studies" className="min-h-screen bg-background">
 
-      <main className="pt-20">
+      <main className="pt-12">
         {/* Hero Section */}
         <section className="py-24 bg-gradient-to-br from-primary/10 via-background to-background">
           <div className="container mx-auto px-6 lg:px-8">
@@ -50,7 +50,15 @@ export default function CaseStudies() {
                   className="text-center p-6 rounded-xl bg-card border border-border shadow-card hover-lift transition-smooth"
                 >
                   <div className="text-4xl md:text-5xl font-bold text-gradient mb-2">
-                    {stat.value}
+                   <CountUp
+  from={0}
+  to={stat.value}
+  separator=","
+  direction="up"
+  duration={1}
+  className="count-up-text"
+/>
+                    
                   </div>
                   <div className="text-sm text-black">{stat.label}</div>
                 </div>

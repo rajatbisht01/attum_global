@@ -7,7 +7,7 @@ import GooeyNav from "@/components/ui/GooeyNav";
 import { usePathname } from "next/navigation"; // ⭐ Added
 
 const gooeyItems = [
-  { label: "Home", href: "/", id: "hero" },
+  { label: "Home", href: "/#hero", id: "hero" },
   { label: "Offering", href: "/#offering", id: "offering" },
   { label: "Case Studies", href: "/case-studies", id: "case-studies" },
   { label: "About", href: "/#about", id: "about" },

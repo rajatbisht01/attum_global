@@ -22,8 +22,7 @@ const Footer = () => {
               ATTUM
             </h3>
             <p className="text-muted-foreground text-sm">
-              Your ONE-stop technology resourcing partner. Simplified. Scaled. Specialized.
-            </p>
+Techno-Functional Expertise. Simplified. Scaled. Specialized.            </p>
           </div>
 
           {/* Quick Links */}

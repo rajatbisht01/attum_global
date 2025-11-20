@@ -40,11 +40,11 @@ const StrategicPillarsSection = () => {
       <div className="container mx-auto relative z-10">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="text-center my-12 "
+          // initial={{ opacity: 0, y: -30 }}
+          // whileInView={{ opacity: 1, y: 0 }}
+          // viewport={{ once: false, margin: "-100px" }}
+          // transition={{ duration: 0.1 }}
+          className="text-center my-2 "
         >
           <motion.span
             initial={{ opacity: 0 }}

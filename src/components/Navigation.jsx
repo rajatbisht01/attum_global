@@ -96,7 +96,7 @@ const Navigation = () => {
           <img
             src={"/assets/logo.png"}
             alt="Logo"
-            className="h-12 w-12 object-fit"
+            className="h-8 w-8 object-fit"
           />
           <motion.span
             initial={{ opacity: 0, x: -10 }}

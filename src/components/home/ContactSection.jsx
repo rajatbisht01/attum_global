@@ -201,7 +201,7 @@ const ContactSection = () => {
               </div>
 
               {/* Office Hours */}
-              <motion.div
+              {/* <motion.div
                 className="mt-12 p-6 bg-gray-50 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -215,7 +215,7 @@ const ContactSection = () => {
                   <br />
                   Sunday: Closed
                 </p>
-              </motion.div>
+              </motion.div> */}
             </div>
           </ScrollReveal>
         </div>

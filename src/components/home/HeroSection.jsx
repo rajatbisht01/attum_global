@@ -11,9 +11,8 @@ const slides = [
   {
     id: 1,
     image: "/assets/innovation-illustration.jpg",
-    title: "Technology Resourcing. Simplified. Scaled. Specialized.",
-    subtitle:
-      "We bring together specialized Centers of Excellence to deliver end-to-end technology resourcing across the full digital lifecycle.",
+    title: "Techno-Functional Expertise. Simplified. Scaled. Specialized.",
+    subtitle:"Through our specialized Centers of Excellence, we deliver comprehensive techno-functional capabilities spanning the complete digital lifecycle.",
     cta: "Get Started",
     section: "offering",
   },
@@ -60,7 +59,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <section ref={heroRef} id="hero" className="relative h-[92vh] overflow-hidden">
+    <section ref={heroRef} id="hero" className="relative h-[70vh] overflow-hidden">
       {/* Floating Orbs */}
       <motion.div
         animate={{ scale: [1, 1.25, 1], opacity: [0.25, 0.4, 0.25] }}
@@ -83,7 +82,7 @@ export default function HeroCarousel() {
             initial={{ opacity: 0, scale: 0.6 }}
             animate={controls}
             variants={{ visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } } }}
-            className="inline-flex items-center bg-primary/10 border mt-12 border-primary/20 px-6 py-2 rounded-full mb-10 backdrop-blur-md"
+            className="inline-flex items-center bg-white border mt-15 border-primary/20 px-6 py-2 rounded-full mb-6 backdrop-blur-md"
           >
             <span className="text-secondary-foreground font-semibold text-xs uppercase tracking-wider">
               Your ONE-stop technology resourcing partner
@@ -96,7 +95,7 @@ export default function HeroCarousel() {
             delay={450}
             animateBy="words"
             direction="top"
-            className="text-4xl  lg:text-7xl font-black leading-[1.1] text-secondary mb-8"
+            className="text-3xl  lg:text-5xl font-black leading-[1.1] text-secondary mb-8"
           />
 
           {/* Subtitle */}

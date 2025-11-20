@@ -28,7 +28,7 @@ export default function Home() {
     repeat: Infinity,
     ease: "easeInOut",
   }}
-  className="flex -mt-3 justify-center"
+  className="flex  justify-center"
   onClick={()=>scrollToSection('technology')}
 >
   <MoveDown className="w-8 h-8 color-brand" />
@@ -85,7 +85,7 @@ export default function Home() {
                 ))}
               </div>
               
-              <motion.p
+              {/* <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -94,7 +94,7 @@ export default function Home() {
               >
                 At ATTUM, we don't just provide resources —{" "}
                 <span className="text-gradient">we enable outcomes.</span>
-              </motion.p>
+              </motion.p> */}
             </motion.div>
 
             <motion.div

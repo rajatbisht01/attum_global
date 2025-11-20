@@ -16,7 +16,7 @@ export default function Home() {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
   }
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-4">
       {/* Hero Section */}
 
         <HeroSection />
@@ -31,7 +31,7 @@ export default function Home() {
   className="flex  justify-center"
   onClick={()=>scrollToSection('technology')}
 >
-  <MoveDown className="w-8 h-8 color-brand" />
+  <MoveDown className="w-8 h-8 text-black text-2xl font-medium" />
 </motion.div>
 
 

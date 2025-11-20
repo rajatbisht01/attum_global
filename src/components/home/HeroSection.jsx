@@ -165,6 +165,7 @@ export default function HeroCarousel() {
           </motion.div>
         </div>
       </div>
+      
     </section>
   );
 }

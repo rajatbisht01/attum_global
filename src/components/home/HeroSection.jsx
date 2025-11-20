@@ -85,7 +85,7 @@ export default function HeroCarousel() {
             variants={{ visible: { opacity: 1, scale: 1, transition: { duration: 0.6 } } }}
             className="inline-flex items-center bg-primary/10 border mt-12 border-primary/20 px-6 py-2 rounded-full mb-10 backdrop-blur-md"
           >
-            <span className="text-secondary-foreground font-semibold text-sm uppercase tracking-wider">
+            <span className="text-secondary-foreground font-semibold text-xs uppercase tracking-wider">
               Your ONE-stop technology resourcing partner
             </span>
           </motion.div>

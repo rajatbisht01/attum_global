@@ -131,7 +131,7 @@ const PartnersSection = () => {
                 <motion.div className="text-4xl mb-4" {...animationProps}>
                   {item.icon}
                 </motion.div>
-                <h3 className="text-xl font-semibold text-gradient mb-3">
+                <h3 className="text-xl font-semibold text-primary mb-3">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
